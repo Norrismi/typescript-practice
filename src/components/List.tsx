@@ -1,20 +1,18 @@
 import React from 'react'
 import sbf from '../assets/sbf.jpg'
-import musk from '../assets/musk.jpg'
-import dw from '../assets/dw.jpg'
-import Input from '../components/Input'
 
-interface IProps {
+
+
+export interface IState {
     people: {
         name: string;
-
         age: number;
         note: string
     }[]
 }
 
 
-const List: React.FC<IProps> = ({ people }) => {
+const List: React.FC<IState> = ({ people }) => {
 
 
     const renderList = () => (
@@ -36,7 +34,7 @@ const List: React.FC<IProps> = ({ people }) => {
     return (
         <>
             {renderList()}
-            <Input/>
+           
 
         </>
     )

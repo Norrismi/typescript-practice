@@ -2,14 +2,11 @@ import React, { useState } from 'react';
 import './App.css';
 import List from './components/List'
 
-import sbf from './assets/sbf.jpg'
-import musk from './assets/musk.jpg'
-import dw from './assets/dw.jpg'
+import Input from './components/Input';
 
-interface IState{
+export interface IState{
   people:{
     name: string;
-
     age: number;
     note: string
   }[]
@@ -43,6 +40,7 @@ function App() {
       <h1 className="flex justify-center text-[40px] font-bold text-white pt-10">People Invited To the Party!</h1>
    
       <List people={people}/>
+      <Input people={people} setPeople={setPeople}/>
     </div>
   );
 }
